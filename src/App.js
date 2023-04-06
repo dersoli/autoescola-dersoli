@@ -4,13 +4,12 @@ import Hero from './components/Hero';
 function App() {
   return (
     <div className="App">
-      <Hero title={
-        <span>
+      <Hero>
+        <h1>
           Ganhe sua <strong>liberdade</strong>
           <br />
           para ir e vir
-        </span>
-      }>
+        </h1>
         <ul>
           <li>Lorem ipsum dolor sit amet.</li>
           <li>Lorem ipsum dolor sit amet.</li>

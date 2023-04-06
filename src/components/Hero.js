@@ -20,7 +20,7 @@ const Root = styled.div`
     
 `
 
-const Title = styled.h1`
+/* const Title = styled.h1`
     position: relative;
     font-weight: 700;
     letter-spacing: 2;
@@ -37,11 +37,7 @@ const Title = styled.h1`
         height: 5px;
         width: 70px;
     }
-
-    strong{
-        color: ${colorYellow};
-    }
-`
+` */
 
 const Content = styled.div`
     p, li{
@@ -83,7 +79,6 @@ const Hero = ({title, children}) => (
         <GlobalStyle />
         <Root image={BgPrincipalImage}>
             <Container>
-                <Title>{title}</Title>
                 <Content>
                     {children}
                 </Content>
@@ -92,7 +87,6 @@ const Hero = ({title, children}) => (
     </>
 );
 Hero.propTypes= {
-    title: PropTypes.oneOfType([PropTypes.string, PropTypes.element]),
     children: PropTypes.node
 }
 
