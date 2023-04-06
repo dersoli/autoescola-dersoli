@@ -2,6 +2,7 @@ import React from 'react'
 import styled, { css } from 'styled-components';
 import BgPrincipalImage from '../assets/images/automobile-g2c0006094_1920.jpg'
 import GlobalStyle from './GlobalStyle';
+import { breakAt, BreakpointSize } from './Breakpoints';
 
 const Root = styled.div`
     color: #fff;
@@ -40,17 +41,17 @@ const Content = styled.div`
 `
 
 const Container = styled.div`
-    background-color: red;
     width: 100%;
     padding: 0 8px;
 
-    @media (min-width: 768px){
+    ${breakAt(BreakpointSize.sm)}{
         padding: 0 16px;
     }
 
-    @media (min-width: 1200px){
-        max-width: 1140px;
+    ${breakAt(BreakpointSize.lg)}{
+        width: 1140px;
         margin: 0 auto;
+        padding: 0;
     }
     
 `
