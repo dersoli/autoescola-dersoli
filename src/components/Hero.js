@@ -5,6 +5,8 @@ import GlobalStyle from './GlobalStyle';
 
 const Root = styled.div`
     color: #fff;
+    padding: 100px 0;
+
     ${props => css`
         background: url(${props.image}), rgba(0, 0, 0, 0.5);
         background-size: cover;
@@ -37,16 +39,32 @@ const Content = styled.div`
     }
 `
 
-const Hero = ({image, title, children}) => (
+const Container = styled.div`
+    background-color: red;
+    width: 100%;
+    padding: 0 8px;
+
+    @media (min-width: 768px){
+        padding: 0 16px;
+    }
+
+    @media (min-width: 1200px){
+        max-width: 1140px;
+        margin: 0 auto;
+    }
+    
+`
+
+const Hero = ({title, children}) => (
     <>
         <GlobalStyle />
-            <Root image={BgPrincipalImage}>
-            <div>
+        <Root image={BgPrincipalImage}>
+            <Container>
                 <Title>{title}</Title>
                 <Content>
                     {children}
                 </Content>
-            </div>
+            </Container>
         </Root>
     </>
 );
