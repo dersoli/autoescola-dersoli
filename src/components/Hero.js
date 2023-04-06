@@ -3,6 +3,7 @@ import styled, { css } from 'styled-components';
 import BgPrincipalImage from '../assets/images/automobile-g2c0006094_1920.jpg'
 import GlobalStyle from './GlobalStyle';
 import { breakAt, BreakpointSize } from './Breakpoints';
+import PropTypes from 'prop-types'
 
 const Root = styled.div`
     color: #fff;
@@ -69,5 +70,9 @@ const Hero = ({title, children}) => (
         </Root>
     </>
 );
+Hero.propTypes= {
+    title: PropTypes.string,
+    children: PropTypes.node
+}
 
 export default Hero;
