@@ -1,6 +1,7 @@
 import React from 'react'
 import styled, { css } from 'styled-components';
 import BgPrincipalImage from '../assets/images/automobile-g2c0006094_1920.jpg'
+import GlobalStyle from './GlobalStyle';
 
 const Root = styled.div`
     color: #fff;
@@ -14,8 +15,6 @@ const Root = styled.div`
 `
 
 const Title = styled.h1`
-    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;700&display=swap');
-    font-family: 'Poppins', sans-serif;
     font-weight: 700;
     letter-spacing: 2;
 `
@@ -39,14 +38,17 @@ const Content = styled.div`
 `
 
 const Hero = ({image, title, children}) => (
-    <Root image={BgPrincipalImage}>
-        <div>
-            <Title>{title}</Title>
-            <Content>
-                {children}
-            </Content>
-        </div>
-    </Root>
+    <>
+        <GlobalStyle />
+            <Root image={BgPrincipalImage}>
+            <div>
+                <Title>{title}</Title>
+                <Content>
+                    {children}
+                </Content>
+            </div>
+        </Root>
+    </>
 );
 
 export default Hero;
